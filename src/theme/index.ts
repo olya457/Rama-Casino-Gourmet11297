@@ -1,0 +1,78 @@
+import { Platform, StyleSheet } from 'react-native';
+
+export const colors = {
+  background: '#120A09',
+  card: '#201412',
+  field: '#190D0B',
+  border: '#422A24',
+  gold: '#EBB438',
+  goldLight: '#FFDA72',
+  text: '#FFF3DF',
+  muted: '#B39C8D',
+  red: '#B9202D',
+  green: '#2A8755',
+};
+export const serif = Platform.select({ ios: 'Georgia', android: 'serif' });
+export const styles = StyleSheet.create({
+  fill: { flex: 1, backgroundColor: colors.background },
+  content: {
+    padding: 20,
+    paddingBottom: 32,
+    gap: 20,
+    width: '100%',
+    maxWidth: 640,
+    alignSelf: 'center',
+  },
+  title: {
+    fontFamily: serif,
+    fontSize: 27,
+    color: colors.text,
+    fontWeight: '700',
+  },
+  subtitle: {
+    fontFamily: serif,
+    fontSize: 21,
+    color: colors.text,
+    fontWeight: '600',
+  },
+  body: { color: colors.muted, fontSize: 14, lineHeight: 23 },
+  text: { color: colors.text, fontSize: 14 },
+  label: {
+    color: colors.gold,
+    fontSize: 10,
+    letterSpacing: 2,
+    textTransform: 'uppercase',
+  },
+  card: {
+    backgroundColor: colors.card,
+    borderRadius: 9,
+    borderColor: colors.border,
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+  pad: { padding: 16, gap: 12 },
+  row: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  wrap: { flexWrap: 'wrap' },
+  stack: { flexDirection: 'column', alignItems: 'stretch' },
+  natural: { flex: 0, width: '100%' },
+  between: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  line: { height: 1, backgroundColor: colors.border },
+  gold: { color: colors.gold, fontSize: 20, fontWeight: '700' },
+  input: {
+    backgroundColor: colors.field,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 13,
+    color: colors.text,
+    minHeight: 48,
+    fontSize: 15,
+  },
+});

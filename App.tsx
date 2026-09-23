@@ -1,45 +1,45 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+import React, { useState } from 'react';
+import { ActivityIndicator, StatusBar, Text, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AppProvider, useApp } from './src/store/AppStore';
+import { SplashScreen, OnboardingScreen } from './src/screens/WelcomeScreens';
+import { AppNavigator } from './src/navigation/AppNavigator';
+import { MotionProvider } from './src/components/Entrance';
+import { Button, Screen } from './src/components/ui';
+import { colors, styles } from './src/theme';
+function AppContent() {
+  const { ready, error, retry, state } = useApp();
+  const [splashDone, setSplashDone] = useState(false);
+  if (!splashDone) {
+    return <SplashScreen onComplete={() => setSplashDone(true)} />;
+  }
+  if (error) {
+    return (
+      <Screen>
+        <Text style={styles.title}>Welcome back</Text>
+        <Text style={styles.body}>{error}</Text>
+        <Button title="Try Again" onPress={retry} />
+      </Screen>
+    );
+  }
+  if (!ready) {
+    return (
+      <View style={styles.fill}>
+        <ActivityIndicator color={colors.gold} />
+      </View>
+    );
+  }
+  return state.onboarded ? <AppNavigator /> : <OnboardingScreen />;
+}
+export default function App() {
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <StatusBar barStyle="light-content" backgroundColor={colors.background} />
+      <MotionProvider>
+        <AppProvider>
+          <AppContent />
+        </AppProvider>
+      </MotionProvider>
     </SafeAreaProvider>
   );
 }
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;

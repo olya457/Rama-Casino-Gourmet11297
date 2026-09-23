@@ -1,0 +1,18 @@
+export const tables = [
+  { id: 1, seats: 2, x: 18, y: 40 },
+  { id: 2, seats: 4, x: 38, y: 40 },
+  { id: 3, seats: 2, x: 61, y: 40 },
+  { id: 4, seats: 6, x: 81, y: 42 },
+  { id: 5, seats: 4, x: 18, y: 47 },
+  { id: 6, seats: 4, x: 38, y: 47 },
+  { id: 7, seats: 2, x: 61, y: 47 },
+  { id: 8, seats: 4, x: 81, y: 49 },
+  { id: 9, seats: 4, x: 18, y: 54 },
+  { id: 10, seats: 2, x: 38, y: 54 },
+  { id: 11, seats: 2, x: 61, y: 54 },
+  { id: 12, seats: 4, x: 81, y: 56 },
+  { id: 13, seats: 4, x: 18, y: 62 },
+  { id: 14, seats: 4, x: 81, y: 63 },
+  { id: 15, seats: 2, x: 19, y: 74 },
+  { id: 16, seats: 2, x: 80, y: 74 },
+];
