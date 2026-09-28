@@ -18,8 +18,8 @@ export function HomeScreen({
     <Screen padded={false}>
       <Image source={assets.restaurant} style={local.hero} />
       <Content>
-        <Text style={s.label}>Rama</Text>
-        <Text style={s.title}>The Grand Table</Text>
+        <Text style={s.label}>Fine Dining</Text>
+        <Text style={s.title}>Dining Experience</Text>
         <Text style={s.body}>{restaurantDescription}</Text>
         <View style={s.line} />
         <Text style={[s.label, local.red]}>Executive Chef</Text>
@@ -102,8 +102,8 @@ const local = StyleSheet.create({
   offerTitle: { fontSize: 16, flex: 1 },
   badge: {
     fontSize: 10,
-    color: colors.background,
-    backgroundColor: colors.gold,
+    color: colors.text,
+    backgroundColor: colors.button,
     padding: 5,
     borderRadius: 4,
     fontWeight: '700',

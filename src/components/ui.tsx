@@ -50,12 +50,7 @@ export function Button({
       setBusy(false);
     }
   };
-  const foreground =
-    variant === 'gold'
-      ? '#160D08'
-      : variant === 'red'
-      ? colors.text
-      : colors.gold;
+  const foreground = variant === 'outline' ? colors.gold : colors.text;
   return (
     <Pressable
       accessibilityRole="button"
@@ -70,11 +65,9 @@ export function Button({
     >
       <LinearGradient
         colors={
-          variant === 'gold'
-            ? ['#F3C453', '#E6AA2D']
-            : variant === 'red'
-            ? ['#C72B37', '#AD1B29']
-            : [colors.background, colors.background]
+          variant === 'outline'
+            ? [colors.card, colors.field]
+            : [colors.buttonLight, colors.button]
         }
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -367,7 +360,7 @@ const local = StyleSheet.create({
   center: { textAlign: 'center' },
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.78)',
+    backgroundColor: colors.overlay,
     justifyContent: 'center',
   },
   modalKeyboard: { flex: 1 },
@@ -389,6 +382,8 @@ const local = StyleSheet.create({
     gap: 8,
   },
   step: {
+    backgroundColor: colors.button,
+    borderRadius: 6,
     minWidth: 42,
     minHeight: 42,
     alignItems: 'center',

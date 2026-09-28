@@ -176,7 +176,7 @@ export function MasterclassScreen({
           <Image source={assets.chef} style={local.host} />
           <View style={local.hostText}>
             <Text style={s.label}>Your host</Text>
-            <Text style={s.subtitle}>The Rama Culinary Team</Text>
+            <Text style={s.subtitle}>The Dining Experience Culinary Team</Text>
             <Text style={s.body}>Contemporary cuisine · The Grand Table</Text>
           </View>
         </View>
@@ -193,6 +193,7 @@ export function MasterclassScreen({
 }
 const local = StyleSheet.create({
   filter: {
+    backgroundColor: colors.card,
     maxWidth: '100%',
     padding: 12,
     borderRadius: 6,
@@ -200,7 +201,7 @@ const local = StyleSheet.create({
     borderColor: colors.border,
     minHeight: 44,
   },
-  activeFilter: { backgroundColor: '#65131C', borderColor: colors.red },
+  activeFilter: { backgroundColor: colors.button, borderColor: colors.red },
   saved: { borderColor: colors.gold },
   image: { width: '100%', aspectRatio: 1.95 },
   date: { fontSize: 12, color: colors.muted },
@@ -211,14 +212,14 @@ const local = StyleSheet.create({
     borderRadius: 4,
     paddingHorizontal: 10,
     paddingVertical: 6,
-    backgroundColor: '#771523',
+    backgroundColor: colors.button,
   },
   exclusiveText: { fontSize: 10, letterSpacing: 1, color: colors.gold },
   heart: { position: 'absolute', top: 10, right: 10 },
   countdown: {
     borderWidth: 1,
     borderColor: colors.gold,
-    backgroundColor: '#211903',
+    backgroundColor: colors.card,
     borderRadius: 7,
     padding: 14,
     gap: 8,

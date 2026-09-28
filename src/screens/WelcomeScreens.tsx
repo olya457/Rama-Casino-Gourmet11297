@@ -2,7 +2,6 @@ import { Entrance } from '../components/Entrance';
 import { useResponsive } from '../hooks/useResponsive';
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  Image,
   ImageBackground,
   ScrollView,
   StyleSheet,
@@ -34,7 +33,7 @@ const loaderSource = {
 </style></head><body><div class="dots"><i></i><i></i><i></i></div></body></html>`,
 };
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [loaderReady, setLoaderReady] = useState(false);
   const callback = useRef(onComplete);
   callback.current = onComplete;
@@ -43,32 +42,23 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <ImageBackground source={assets.splash} style={local.fill}>
+    <ImageBackground source={assets.splash} style={[local.fill, s.fill]}>
       <LinearGradient
-        colors={['#00000018', '#00000035', '#00000080']}
+        colors={['#240A1470', '#240A1499', '#240A14E6']}
         style={local.fill}
       >
         <SafeAreaView style={local.splash}>
           <View style={local.brand}>
-            <Image
-              source={assets.logo}
-              resizeMode="contain"
-              style={{
-                width: Math.min(width * 0.69, 290),
-                height: Math.min(height * 0.36, 310),
-              }}
-            />
             <Text
               adjustsFontSizeToFit
               numberOfLines={1}
               style={[
                 local.brandTitle,
-                { fontSize: Math.min(width * 0.12, 54) },
+                { fontSize: Math.min(width * 0.085, 42) },
               ]}
             >
-              Rama
+              Dining Experience
             </Text>
-            <Text style={local.brandSubtitle}>Gourmet</Text>
           </View>
           <View
             style={local.loader}
@@ -104,8 +94,8 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
 }
 const slides = [
   {
-    title: 'Discover Rama\nRestaurant',
-    text: 'Explore the restaurant concept, meet the chef, and discover the Dish of the Day and Drink of the Day. Find everything you need for a memorable dining experience at Rama.',
+    title: 'Discover\nDining Experience',
+    text: 'Explore the restaurant concept, meet the chef, and discover the Dish of the Day and Drink of the Day. Find everything you need for a memorable dining experience at Dining Experience.',
   },
   {
     title: 'Explore the\nMenu',
@@ -117,7 +107,7 @@ const slides = [
   },
   {
     title: 'Enjoy More\nThan Dinner',
-    text: 'Join exclusive chef-led masterclasses, split the bill with ease, calculate tips, and share your dining experience. Rama brings every detail of your visit together in one convenient app.',
+    text: 'Join exclusive chef-led masterclasses, split the bill with ease, calculate tips, and share your dining experience. Dining Experience brings every detail of your visit together in one convenient app.',
   },
 ];
 export function OnboardingScreen() {
@@ -125,9 +115,12 @@ export function OnboardingScreen() {
   const { update } = useApp();
   const { compact, short, spacing, availableHeight } = useResponsive();
   return (
-    <ImageBackground source={assets.onboarding[index]} style={local.fill}>
+    <ImageBackground
+      source={assets.onboarding[index]}
+      style={[local.fill, s.fill]}
+    >
       <LinearGradient
-        colors={['#00000000', '#00000025', '#000000CC']}
+        colors={['#240A1433', '#240A1480', '#240A14F2']}
         locations={[0, 0.3, 1]}
         style={local.fill}
       >
@@ -144,7 +137,7 @@ export function OnboardingScreen() {
               direction="right"
               style={[local.copy, short && local.shortCopy]}
             >
-              <Text style={s.label}>Rama · Fine Dining</Text>
+              <Text style={s.label}>Dining Experience · Fine Dining</Text>
               <Text style={[local.onboardTitle, compact && local.compactTitle]}>
                 {slides[index].title}
               </Text>
@@ -190,12 +183,6 @@ const local = StyleSheet.create({
     fontFamily: serif,
     fontWeight: '700',
     marginTop: 24,
-  },
-  brandSubtitle: {
-    color: '#FFE000',
-    fontSize: 34,
-    fontFamily: serif,
-    letterSpacing: 2,
   },
   loader: { position: 'absolute', bottom: '4%', height: 70, width: 160 },
   webviewContainer: { flex: 1, backgroundColor: 'transparent' },
@@ -247,7 +234,7 @@ const local = StyleSheet.create({
     gap: 7,
     marginVertical: 10,
   },
-  dot: { height: 6, width: 6, borderRadius: 4, backgroundColor: '#63483C' },
+  dot: { height: 6, width: 6, borderRadius: 4, backgroundColor: colors.border },
   activeDot: { width: 24, backgroundColor: colors.gold },
   counter: { fontSize: 12, color: colors.text, marginLeft: 6 },
 });

@@ -284,10 +284,10 @@ const local = StyleSheet.create({
     borderRadius: 5,
     alignItems: 'center',
   },
-  selected: { backgroundColor: '#701522' },
+  selected: { backgroundColor: colors.button },
   tabText: { fontSize: 12, color: colors.muted, textAlign: 'center' },
   selectedText: { color: colors.gold, fontWeight: '600' },
-  result: { borderColor: '#A37B1E', backgroundColor: '#201A05' },
+  result: { borderColor: '#A37B1E', backgroundColor: colors.card },
   error: { color: '#FF8791', lineHeight: 22 },
   half: { flex: 1 },
   chip: {

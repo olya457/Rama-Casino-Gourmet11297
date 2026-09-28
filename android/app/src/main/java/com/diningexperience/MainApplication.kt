@@ -1,4 +1,4 @@
-package com.ramacasino.gourmet
+package com.diningexperience
 
 import android.app.Application
 import com.facebook.react.PackageList

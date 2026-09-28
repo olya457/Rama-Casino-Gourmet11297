@@ -275,13 +275,14 @@ export function BookingScreen() {
   );
 }
 const local = StyleSheet.create({
-  occupied: { backgroundColor: '#510E17F2' },
-  available: { backgroundColor: '#0B3323F2' },
+  occupied: { backgroundColor: '#60172FF2' },
+  available: { backgroundColor: '#350F1FF2' },
   occupiedText: { color: '#FF6269' },
   availableText: { color: '#60D391' },
   half: { flex: 1, gap: 12 },
   dateText: { flex: 1 },
   dateButton: {
+    backgroundColor: colors.card,
     minHeight: 48,
     borderRadius: 8,
     borderWidth: 1,

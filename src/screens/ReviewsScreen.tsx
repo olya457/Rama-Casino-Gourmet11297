@@ -123,7 +123,7 @@ export function ReviewsScreen() {
     <Screen padded={false}>
       <Image source={assets.restaurant} style={local.hero} />
       <Content>
-        <Text style={s.label}>Rama · The Grand Table</Text>
+        <Text style={s.label}>Dining Experience</Text>
         <Text style={s.title}>Guest Reviews</Text>
         <View style={s.row}>
           <Text style={local.average}>

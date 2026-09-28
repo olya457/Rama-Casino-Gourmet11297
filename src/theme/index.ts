@@ -1,15 +1,18 @@
 import { Platform, StyleSheet } from 'react-native';
 
 export const colors = {
-  background: '#120A09',
-  card: '#201412',
-  field: '#190D0B',
-  border: '#422A24',
+  background: '#240A14',
+  card: '#350F1F',
+  field: '#2C0B19',
+  border: '#633044',
   gold: '#EBB438',
   goldLight: '#FFDA72',
   text: '#FFF3DF',
   muted: '#B39C8D',
-  red: '#B9202D',
+  red: '#751E3A',
+  button: '#60172F',
+  buttonLight: '#7A2644',
+  overlay: 'rgba(36,10,20,0.82)',
   green: '#2A8755',
 };
 export const serif = Platform.select({ ios: 'Georgia', android: 'serif' });
