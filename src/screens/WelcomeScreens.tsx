@@ -66,7 +66,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
                 { fontSize: Math.min(width * 0.12, 54) },
               ]}
             >
-              Rama Casino
+              Rama
             </Text>
             <Text style={local.brandSubtitle}>Gourmet</Text>
           </View>
@@ -105,7 +105,7 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
 const slides = [
   {
     title: 'Discover Rama\nRestaurant',
-    text: 'Explore the restaurant concept, meet the chef, and discover the Dish of the Day and Drink of the Day. Find everything you need for a memorable dining experience at Rama Casino.',
+    text: 'Explore the restaurant concept, meet the chef, and discover the Dish of the Day and Drink of the Day. Find everything you need for a memorable dining experience at Rama.',
   },
   {
     title: 'Explore the\nMenu',
@@ -144,7 +144,7 @@ export function OnboardingScreen() {
               direction="right"
               style={[local.copy, short && local.shortCopy]}
             >
-              <Text style={s.label}>Rama Casino · Fine Dining</Text>
+              <Text style={s.label}>Rama · Fine Dining</Text>
               <Text style={[local.onboardTitle, compact && local.compactTitle]}>
                 {slides[index].title}
               </Text>

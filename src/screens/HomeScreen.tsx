@@ -18,7 +18,7 @@ export function HomeScreen({
     <Screen padded={false}>
       <Image source={assets.restaurant} style={local.hero} />
       <Content>
-        <Text style={s.label}>Rama Casino</Text>
+        <Text style={s.label}>Rama</Text>
         <Text style={s.title}>The Grand Table</Text>
         <Text style={s.body}>{restaurantDescription}</Text>
         <View style={s.line} />

@@ -1,4 +1,4 @@
-package com.ramacasinogourmet
+package com.ramacasino.gourmet
 
 import android.os.Bundle
 import com.facebook.react.ReactActivity

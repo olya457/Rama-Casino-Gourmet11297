@@ -244,6 +244,6 @@ export const dishes: Dish[] = [
   },
 ];
 export const restaurantDescription =
-  'Located within Rama Casino, our restaurant offers a refined dining experience in an elegant and atmospheric setting. The menu combines modern culinary techniques with carefully selected ingredients and beautifully presented dishes. Guests can enjoy signature meals, crafted drinks, seasonal specials, and attentive service throughout their visit. Whether you are joining us for a casual dinner, a celebration, or an evening at the casino, every detail is designed to make your experience memorable.';
+  'Rama restaurant offers a refined dining experience in an elegant and atmospheric setting. The menu combines modern culinary techniques with carefully selected ingredients and beautifully presented dishes. Guests can enjoy signature meals, crafted drinks, seasonal specials, and attentive service throughout their visit. Whether you are joining us for a casual dinner, a celebration, or an evening out, every detail is designed to make your experience memorable.';
 export const chefDescription =
   'Our chef brings creativity, precision, and a passion for contemporary cuisine to every dish. Her cooking combines refined presentation with rich flavors and carefully balanced ingredients. Inspired by seasonal products and modern culinary traditions, she creates a menu that feels both elegant and inviting. Guests can also discover her approach to cooking through exclusive chef-led masterclasses.';
